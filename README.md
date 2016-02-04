@@ -66,9 +66,11 @@ If you haven't installed mongo, I suggest you go to [https://docs.mongodb.org/ge
 
 Once installed you need to first start the mongo service. I make assumption that your **databases** are found from:
 
-```/data/db```
+```
+/data/db
+```
 
-at root.  You can double check this by typing in terminal:
+at root. You can double check this by typing in terminal:
 
 ```
 $ cd /
@@ -120,4 +122,31 @@ everything should be fine.
 
 #### Start the node.js server
 
-Now that the mongodb is running, open a new tab or a window in terminal and go to your projects root.
+Now that the mongodb is running, open a new tab or a window in terminal and go to your projects root. Type
+
+```
+$ npm run server:sync
+```
+
+This starts the node express server, watch tasks and browsersync proxy so that browsers is livereloaded when something changes. Now you are ready to start working with node express and mongodb.
+
+The node express server is found from:
+
+```
+./express.server.js
+```
+
+and the routes (methods) berforming logic from:
+
+```
+./express.router.js
+```
+
+The actual boot is in
+
+```
+./bin/www
+```
+
+if you need to update it. In **express.server.js** you can configure mongodb, source is commented and the **express.routes.js** contains commented examples how the started with mongodb read/write tasks.
+

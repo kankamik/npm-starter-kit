@@ -11,6 +11,7 @@ router.get('/helloworld', function(req, res) {
     res.render('helloworld', { title: 'Hello, World!' })
 });
 
+/* Examples */
 /* GET Userlist page. */
 /**
 router.get('/userlist', function(req, res) {
