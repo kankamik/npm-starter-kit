@@ -1,0 +1,77 @@
+
+extends ./layouts/head
+
+block content
+    body.type--reset.type--setup.margin--large.margin--b
+        header.padding--small.padding
+            include ./blocks/intro-title--small
+        section.cw.cw--small.grid
+            div.type--align-center.grid-col.grid-col--12-12
+                h1.type--color-white Style Guide
+        section.cw.cw--large.grid
+            div.grid-col.grid-col--12-12
+                h2.type--color-white-light Typography
+            div.grid-col.grid-col--2-6.grid-col--lg-2-12
+                h4.type--semibold.type--color-grey.margin--reset-b Open Sans
+                h2.type--bold.type--color-white-light.margin--reset-b Aa
+                h4.type--semibold.type--color-white-light.margin--reset-t Bold
+                h2.type--semibold.type--color-white-light.margin--reset-b Aa
+                h4.type--semibold.type--color-white-light.margin--reset-t Semibold
+                h2.type--regular.type--color-white-light.margin--reset-b Aa
+                h4.type--semibold.type--color-white-light.margin--reset-t Regular
+                h2.type--light.type--color-white-light.margin--reset-b Aa
+                h4.type--semibold.type--color-white-light.margin--reset-t Light
+            div.grid-col.grid-col--4-6.grid-col--lg-8-12
+                p.type--color-grey Kit delivers Open Sans as a font family, it's converted to css font and loaded with loadCSS -function that is packed to this kit also.
+                h4.type--semibold.type--color-grey Baseline and sizes
+                div.display--lg-none-to-block
+                    div.table.margin--b.margin--t
+                        div.table__row
+                            span.table__cell
+                            span.table__cell.type--color-white-light font-size
+                            span.table__cell.type--color-white-light line-height
+                            span.table__cell
+                        div.table__row
+                            span.table__cell.type--color-white-light Mobile
+                            span.table__cell.type--color-grey 16px
+                            span.table__cell.type--color-grey 28px
+                            span.table__cell.type--color-grey 28 / 16 = 1.75rem
+                        div.table__row
+                            span.table__cell.type--color-white-light Desktop
+                            span.table__cell.type--color-grey 20px
+                            span.table__cell.type--color-grey 35px
+                            span.table__cell.type--color-grey 35 / 20 = 1.75rem
+                div.display--sm-block-to-none
+                    p.type--color-white-light.margin--t
+                        span.display--block Mobile
+                        span.display--block.type--color-grey font size, 16px
+                        span.display--block.type--color-grey line height, 28px
+                        span.display--block.type--color-grey 28 / 16 = 1.75rem
+                    p.type--color-white-light
+                        span.display--block Desktop
+                        span.display--block.type--color-grey font size, 20px
+                        span.display--block.type--color-grey line height, 35px
+                        span.display--block.type--color-grey 35 / 20 = 1.75rem
+                h1.type--color-grey Heading 1
+                h2.type--color-grey Heading 2
+                h3.type--color-grey Heading 3
+                h4.type--color-grey Heading 4
+                p.type--color-grey Basic paragraph
+        section.cw.cw--large.grid.grid--apply-bottom-gutter-small
+            div.grid-col.grid-col--12-12.grid--clear
+                h2.type--color-white-light Grids
+                p.type--color-grey Responsive grids that deliver flexible system to work with colums. Below is and example that changes when you scale it up.
+            div.grid-col.grid-col--2-6.grid-col--md-3-9.grid-col--gutter-small
+                span.grid-placeholder
+            div.grid-col.grid-col--4-6.grid-col--md-3-9.grid-col--md-gutter-force.grid-col--gutter-small
+                span.grid-placeholder
+            div.grid-col.grid-col--2-6.grid-col--md-3-9.grid-col--md-gutter-reset.grid-col--gutter-small
+                span.grid-placeholder
+            div.grid-col.grid-col--2-6.grid-col--md-7-9.grid-col--gutter-small
+                span.grid-placeholder
+            div.grid-col.grid-col--2-6.grid-col--md-2-9
+                span.grid-placeholder
+            div.grid-col.grid-col--3-6.grid-col--gutter-small
+                span.grid-placeholder
+            div.grid-col.grid-col--3-6
+                span.grid-placeholder

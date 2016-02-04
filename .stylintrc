@@ -1,0 +1,43 @@
+{
+    // stylint configuration
+    // See https://www.npmjs.com/package/stylint for more details
+    // stylint also accepts object properties:
+    // "brackets": {
+    //     "expect": "never",
+    //     "error": true
+    // }
+
+    "blocks": false,
+    "brackets": "never",
+    "colons": "newer",
+    "colors": "always",
+    "commaSpace": "always",
+    "commentSpace": "always",
+    "cssLiteral": "never",
+    "depthLimit": false,
+    "duplicates": true,
+    "efficient": "always",
+    "extendPref": false,
+    "globalDupe": false,
+    "indentPref": false,
+    "leadingZero": "never",
+    "maxErrors": false,
+    "maxWarnings": false,
+    "mixed": false,
+    "namingConvention": false,
+    "namingConventionStrict": false,
+    "none": "never",
+    "noImportant": false,
+    "parenSpace": false,
+    "placeholders": "always",
+    "prefixVarsWithDollar": "newer",
+    "quotePref": false,
+    "semicolons": "never",
+    "sortOrder": "smacss",
+    "stackedProperties": "never",
+    "trailingWhitespace": "never",
+    "universal": false,
+    "valid": true,
+    "zeroUnits": "never",
+    "zIndexNormalize": false
+}

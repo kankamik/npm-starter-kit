@@ -1,0 +1,27 @@
+doctype html
+html(lang="en").type--reset.background--black
+  head
+    title NPM Starter Kit | Run NPM as build tool
+    meta("http-equiv"="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta("charset"="UTF-8")
+    meta("name"="viewport", "content"="width=device-width, initial-scale=1")
+    <!-- Disable tap highlight on IE -->
+    meta("name"="msapplication-tap-highlight" "content"="no")
+
+    <!-- Add to homescreen for Chrome on Android -->
+    meta("name"="mobile-web-app-capable" "content"="yes")
+    meta("name"="application-name" "content"="NPM Starter Kit | Run NPM as build tool")
+
+    <!-- Add to homescreen for Safari on iOS -->
+    meta("name"="apple-mobile-web-app-capable" "content"="yes")
+    meta("name"="apple-mobile-web-app-status-bar-style" "content"="black")
+    meta("name"="apple-mobile-web-app-title" "content"="NPM Starter Kit | Run NPM as build tool")
+
+    meta("name"="msapplication-TileColor" "content"="#00a1d4")
+
+    <!-- Color the status bar on mobile devices -->
+    meta("name"="theme-color" "content"="#00a1d4")
+    link(href="stylesheets/styles.css" rel="stylesheet")
+    script
+      include ../../../dist/scripts/inline.js
+    block content

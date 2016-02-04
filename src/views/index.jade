@@ -1,0 +1,22 @@
+
+extends ./layouts/head
+
+block content
+    body.type--reset.type--setup.margin--large.margin--b
+        div.cw.cw--large.grid.margin--large.margin--t
+            div.type--align-center.grid-col.grid-col--12-12
+                include ./blocks/intro-title
+        div.cw.cw--small.grid
+            div.type--align-center.grid-col.grid-col--12-12
+                p.type--ingress.type--color-grey This is a Starter Kit for local web development. It's powered only by NPM, nothing else.
+        div.cw.cw--small.grid
+            div.grid-col.grid-col--12-12
+                h2.type--align-center.type--color-white-light What's included
+                p.type--color-grey #[span.type--semibold.type--color-white-light Stylus] as CSS preprocessor and a set of BEM modifier classes to controll type, grids, margins, paddings and a lot more.
+                p.type--color-grey #[span.type--semibold.type--color-white-light Webpack] as JavaScript bundler and some cool scripts like loadCSS and loadJS.
+                p.type--color-grey #[span.type--semibold.type--color-white-light Jade] as HTML preprocessor. And the jade files work out of the box with node express or without it.
+                p.type--color-grey #[span.type--semibold.type--color-white-light Browsersync] to livereload when css, js or html update with the help of #[span.type--semibold.type--color-white-light Watch].
+                p.type--color-grey #[span.type--semibold.type--color-white-light JSHint & Stylint] out of the box configured to keep your code clean.
+                p.type--color-grey #[span.type--semibold.type--color-white-light Express on top of Node and Mongodb] if you need a backend service and REST Api to develop something more dynamic.
+                h2.type--align-center.type--color-white-light Getting started
+                p.type--color-grey If you see this, I guess you have managed to get things up and running. To read more specific guidance about the principles and technical possibilites of this kit, check out the #[a(href='#' targe='_blank') README] on Github and also check out the #[a(href='#' targe='_blank') (Not So Live) Style Guide] to see all included styles.

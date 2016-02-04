@@ -1,0 +1,79 @@
+margin-value = 1.75rem
+
+.margin
+    padding margin-value
+
+.margin--t
+    padding-top margin-value
+
+.margin--r
+    padding-right margin-value
+
+.margin--b
+    padding-bottom margin-value
+
+.margin--l
+    padding-left margin-value
+
+.margin--negative-t
+    margin-top -(margin-value)
+
+.margin--negative-b
+    margin-bottom -(margin-value)
+
+.margin--large
+    &.margin
+        padding 2 * margin-value
+
+    &.margin--t
+        padding-top 2 * margin-value
+
+    &.margin--r
+        padding-right 2 * margin-value
+
+    &.margin--b
+        padding-bottom 2 * margin-value
+
+    &.margin--l
+        padding-left 2 * margin-value
+
+    &.margin--negative-t
+        margin-top -(2 * margin-value)
+
+    &.margin--negative-b
+        margin-bottom -(2 * margin-value)
+
+.margin--small
+    &.margin
+        padding margin-value / 2
+
+    &.margin--t
+        padding-top margin-value / 2
+
+    &.margin--r
+        padding-right margin-value / 2
+
+    &.margin--b
+        padding-bottom margin-value / 2
+
+    &.margin--l
+        padding-left margin-value / 2
+
+    &.margin--negative-t
+        margin-top -(margin-value / 2)
+
+    &.margin--negative-b
+        margin-bottom -(margin-value / 2)
+
+
+.margin--reset-t
+    margin-top 0 !important
+
+.margin--reset-b
+    margin-bottom 0 !important
+
+.margin--reset-l
+    margin-left 0 !important
+
+.margin--reset-r
+    margin-right 0 !important

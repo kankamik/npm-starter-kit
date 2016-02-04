@@ -1,0 +1,50 @@
+{
+    "name": "npm-starter-kit",
+    "version": "0.0.1",
+    "description": "Small npm based starter kit for local development. Stylus, Webpack, Jade, Browsersyn, Node and Mongodb included.",
+    "devDependencies": {
+        "body-parser": "latest",
+        "cookie-parser": "latest",
+        "debug": "latest",
+        "express": "latest",
+        "morgan": "latest",
+        "serve-favicon": "latest",
+        "mongodb": "latest",
+        "monk": "latest"
+    },
+    "dependencies": {
+        "browser-sync": "latest",
+        "jshint": "latest",
+        "jade": "latest",
+        "parallelshell": "latest",
+        "stylus": "latest",
+        "stylint": "latest",
+        "watch": "latest",
+        "webpack": "latest"
+    },
+    "scripts": {
+        "info": "echo 'Small npm based starter kit for local development. Stylus, Webpack, Jade, Browsersyn, Node and Mongodb included.'",
+        "stylus": "stylus ./src/stylus/ --out ./dist/stylesheets && stylus ./src/stylus/fonts/ --out ./dist/stylesheets",
+        "jade": "jade ./src/views/*.jade --out ./dist",
+        "lint": "jshint ./src/scripts/*",
+        "stylint": "stylint ./src/stylus",
+        "webpack": "webpack ./src/scripts/bundles/inline.js ./dist/scripts/inline.js && webpack ./src/scripts/bundles/bundle.js ./dist/scripts/bundle.js",
+        "browser-sync": "browser-sync start --files ./dist/ --server ./dist",
+        "browser-sync:proxy": "browser-sync start --proxy localhost:3000 --files ./dist/",
+        "compile:css": "npm run stylint && npm run stylus",
+        "compile:js": "npm run lint && npm run webpack",
+        "minify:css": "stylus --compress ./src/stylus/ --out ./dist/stylesheets && stylus --compress ./src/stylus/fonts/ --out ./dist/stylesheets",
+        "minify:js": "webpack -p ./src/scripts/bundles/inline.js ./dist/scripts/inline.js && webpack -p ./src/scripts/bundles/bundle.js ./dist/scripts/bundle.js",
+        "watch": "parallelshell 'npm run watch:js' 'npm run watch:css' 'npm run watch:html'",
+        "watch:js": "watch 'npm run compile:js && npm run jade' ./src/scripts/",
+        "watch:css": "watch 'npm run compile:css && npm run jade' ./src/stylus/",
+        "watch:html": "watch 'npm run jade' ./src/views/",
+        "start": "parallelshell 'npm run watch' 'npm run browser-sync'",
+        "server": "node ./bin/www",
+        "server:sync": "parallelshell 'node ./bin/www' 'npm run watch' 'npm run browser-sync:proxy'",
+        "server:db:start": "mongod --dbpath /data/db --fork --logpath /dev/null",
+        "server:db:stop": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
+    },
+    "author": "kankmik",
+    "license": "MIT"
+}

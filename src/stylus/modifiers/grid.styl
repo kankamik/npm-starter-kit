@@ -1,0 +1,265 @@
+// Grid for mobile, 4 columns
+// Grid for tablets, 9 columns
+// Grid for desktop, 12 columns
+grid--column-small =  100% / 6
+grid--column-medium =  100% / 9
+grid--column-large =  100% / 12
+grid-gutter = 1.75rem
+
+.grid--pad
+    padding grid-gutter 0 grid-gutter grid-gutter
+
+.grid-pad > .grid-col:last-of-type
+  padding-right grid-gutter
+
+.grid:after,
+.grid--clear
+    content ''
+    display table
+    clear both
+
+.grid,
+.grid-col
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
+// You can apply bottom gutters to all
+// grid columns
+.grid--apply-bottom-gutter
+    .grid-col
+        padding-bottom grid-gutter
+
+.grid--apply-bottom-gutter-small
+    .grid-col
+        padding-bottom (grid-gutter / 2)
+
+.grid-col
+    float left
+
+.grid-col--gutter
+    padding-right grid-gutter
+
+.grid-col--gutter-small
+    padding-right (grid-gutter / 2)
+
+.grid-col--gutter-b
+    padding-bottom grid-gutter
+
+.grid-col--gutter-small-b
+    padding-bottom (grid-gutter / 2)
+
+.grid-col:last-of-type
+    padding-right 0
+
+// Force grid columns right padding always
+.grid-col--gutter-force
+    padding-right grid-gutter
+    &.grid-col--gutter-small
+        padding-right (grid-gutter / 2)
+
+// Force grid columns right padding after mobile
+// breakpoint
+.grid-col--md-gutter-force
+    padding-right 0
+    +respond-above(mobile)
+        padding-right grid-gutter
+        &.grid-col--gutter-small
+            padding-right (grid-gutter / 2)
+
+// Force grid columns right padding after tablet
+// breakpoint
+.grid-col--lg-gutter-force
+    padding-right 0
+    +respond-above(tablet)
+        padding-right grid-gutter
+        &.grid-col--gutter-small
+            padding-right (grid-gutter / 2)
+
+// Force grid columns right padding after mobile
+// breakpoint
+.grid-col--md-gutter-reset
+    +respond-above(mobile)
+        padding-right 0
+
+// Force grid columns right padding after tablet
+// breakpoint
+.grid-col--lg-gutter-force
+    +respond-above(tablet)
+        padding-right 0
+
+// Grid for mobile
+.grid-col--1-6
+    width grid--column-small
+
+.grid-col--2-6
+    width (2 * grid--column-small)
+
+.grid-col--3-6
+    width (3 * grid--column-small)
+
+.grid-col--4-6
+    width (4 * grid--column-small)
+
+.grid-col--5-6
+    width (5 * grid--column-small)
+
+.grid-col--6-6
+    width (6 * grid--column-small)
+
+
+// Grid for tablets
+.grid-col--1-9
+    width grid--column-medium
+
+.grid-col--2-9
+    width (2 * grid--column-medium)
+
+.grid-col--3-9
+    width (3 * grid--column-medium)
+
+.grid-col--4-9
+    width (4 * grid--column-medium)
+
+.grid-col--5-9
+    width (5 * grid--column-medium)
+
+.grid-col--6-9
+    width (6 * grid--column-medium)
+
+.grid-col--7-9
+    width (7 * grid--column-medium)
+
+.grid-col--8-9
+    width (8 * grid--column-medium)
+
+.grid-col--9-9
+    width (9 * grid--column-medium)
+
+
+// Grid to active after min-width of mobile
+// breakpoint
+.grid-col--md-1-9
+    +respond-above(mobile)
+        width grid--column-medium
+
+.grid-col--md-2-9
+    +respond-above(mobile)
+        width (2 * grid--column-medium)
+
+.grid-col--md-3-9
+    +respond-above(mobile)
+        width (3 * grid--column-medium)
+
+.grid-col--md-4-9
+    +respond-above(mobile)
+        width (4 * grid--column-medium)
+
+.grid-col--md-5-9
+    +respond-above(mobile)
+        width (5 * grid--column-medium)
+
+.grid-col--md-6-9
+    +respond-above(mobile)
+        width (6 * grid--column-medium)
+
+.grid-col--md-7-9
+    +respond-above(mobile)
+        width (7 * grid--column-medium)
+
+.grid-col--md-8-9
+    +respond-above(mobile)
+        width (8 * grid--column-medium)
+
+.grid-col--md-9-9
+    +respond-above(mobile)
+        width (9 * grid--column-medium)
+
+
+// Grid for desktop
+.grid-col--1-12
+    width grid--column-large
+
+.grid-col--2-12
+    width (2 * grid--column-large)
+
+.grid-col--3-12
+    width (3 * grid--column-large)
+
+.grid-col--4-12
+    width (4 * grid--column-large)
+
+.grid-col--5-12
+    width (5 * grid--column-large)
+
+.grid-col--6-12
+    width (6 * grid--column-large)
+
+.grid-col--7-12
+    width (7 * grid--column-large)
+
+.grid-col--8-12
+    width (8 * grid--column-large)
+
+.grid-col--9-12
+    width (9 * grid--column-large)
+
+.grid-col--10-12
+    width (10 * grid--column-large)
+
+.grid-col--11-12
+    width (11 * grid--column-large)
+
+.grid-col--12-12
+    width (12 * grid--column-large)
+
+
+// Grid to activate after min-width of tablet
+// breakpoint
+.grid-col--lg-1-12
+    +respond-above(tablet)
+        width grid--column-large
+
+.grid-col--lg-2-12
+    +respond-above(tablet)
+        width (2 * grid--column-large)
+
+.grid-col--lg-3-12
+    +respond-above(tablet)
+        width (3 * grid--column-large)
+
+.grid-col--lg-4-12
+    +respond-above(tablet)
+        width (4 * grid--column-large)
+
+.grid-col--lg-5-12
+    +respond-above(tablet)
+        width (5 * grid--column-large)
+
+.grid-col--lg-6-12
+    +respond-above(tablet)
+        width (6 * grid--column-large)
+
+.grid-col--lg-7-12
+    +respond-above(tablet)
+        width (7 * grid--column-large)
+
+.grid-col--lg-8-12
+    +respond-above(tablet)
+        width (8 * grid--column-large)
+
+.grid-col--lg-9-12
+    +respond-above(tablet)
+        width (9 * grid--column-large)
+
+.grid-col--lg-10-12
+    +respond-above(tablet)
+        width (10 * grid--column-large)
+
+.grid-col--lg-11-12
+    +respond-above(tablet)
+        width (11 * grid--column-large)
+
+.grid-col--lg-12-12
+    +respond-above(tablet)
+        width (12 * grid--column-large)

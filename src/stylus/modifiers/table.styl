@@ -1,0 +1,54 @@
+spacing-value = 1.75rem;
+
+.table
+    display table
+    width 100%
+
+.table__row
+    display table-row
+    line-height spacing-value
+
+.table__cell
+    display table-cell
+    line-height spacing-value
+
+.table--on-tablet
+    display block
+
+    +respond-above(mobile)
+        display table
+        width 100%
+
+    .table__row
+        display block
+
+        +respond-above(mobile)
+            display table-row
+
+    .table__cell
+        display block
+
+        +respond-above(mobile)
+            display table-cell
+
+.table--on-desktop
+    display block
+
+    +respond-above(tablet)
+        display table
+        width 100%
+
+    .table__row
+        display block
+
+        +respond-above(tablet)
+            display table-row
+
+    .table__cell
+        display block
+
+        +respond-above(tablet)
+            display table-cell
+
+.table--fixe-layout
+    table-layout fixed

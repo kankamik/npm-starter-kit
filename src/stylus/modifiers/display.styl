@@ -1,0 +1,66 @@
+
+.display--inline
+    display inline
+
+.display--inline-block
+    display inline-block
+
+.display--block
+    display block
+
+.display--none
+    display none
+
+.display--hidden
+    visibility hidden
+
+.display--visible
+    visibility visible
+
+// Apply on mobile resolution
+.display--sm-block-to-none
+    display block
+    +respond-above(mobile)
+        display none
+
+.display--sm-inline-block-to-none
+    display inline-block
+    +respond-above(mobile)
+        display none
+
+// Apply on tablet resolution
+.display--md-visible-to-hidden
+    visibility visible
+    +respond-above(mobile)
+        visibility none
+
+.display--md-none-to-block
+    display none
+    +respond-above(mobile)
+        display block
+
+.display--md-none-to-inline-block
+    display none
+    +respond-above(mobile)
+        display inline-block
+
+.display--md-hidden-to-visible
+    visibility hidden
+    +respond-above(mobile)
+        visibility visibile
+
+// Apply on desktop resolution
+.display--lg-none-to-block
+    display none
+    +respond-above(tablet)
+        display block
+
+.display--lg-none-to-inline-block
+    display none
+    +respond-above(tablet)
+        display inline-block
+
+.display--lg-hidden-to-visible
+    visibility hidden
+    +respond-above(tablet)
+        visibility visibile
