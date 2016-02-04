@@ -20,37 +20,37 @@ Minimal amount of dependencies, simple setup and ready made assets and best prac
 
 First make sure that you have Node and NPM installed by running:
 
-´´´
+```
 $ node -v
-´´´
+```
 
 If not, go to [https://nodejs.org/en/](https://nodejs.org/en/) and follow instructions. If you are technically advanced, install Node through Node Version Manager (nvm) by following these instructions: [https://github.com/creationix/nvm](https://github.com/creationix/nvm). I have developed this kit with Node 0.12.4 and npm 2.10.1.
 
 Now, clone the repository by:
 
-´´´
+```
 $ git clone git@github.com:kankamik/npm-starter-kit.git
-´´´
+```
 
 or download the .zip at [https://github.com/kankamik/npm-starter-kit](https://github.com/kankamik/npm-starter-kit) and extract it somewhere on your disk.
 
 Open Terminal or your choice of accessing command line and go to the place you cloned/extracted the kit and run:
 
-´´´
+```
 $ npm install
-´´´
+```
 
 If you want to install dependencies without node express and Mongodb, type:
 
-´´´
+```
 $ npm install --production
-´´´
+```
 
 If everything was installed without a problem, just type:
 
-´´´
+```
 $ npm run start
-´´´
+```
 
 You should see a lot things happening on the  command line and a page opened in your browser. What this does is that it compiles initial CSS, JavaScript and HTML files, starts watching changes on same assets and starts Browsersync to serve them to your browser.
 
@@ -66,55 +66,55 @@ If you haven't installed mongo, I suggest you go to [https://docs.mongodb.org/ge
 
 Once installed you need to first start the mongo service. I make assumption that your **databases** are found from:
 
-´´´/data/db´´´
+```/data/db```
 
 at root.  You can double check this by typing in terminal:
 
-´´´
+```
 $ cd /
 $ cd data/db
-´´´
+```
 
 If those folders were not found, verify that you followed the installing instructions. To start the mongo service, run:
 
-´´´
+```
 $ mongod --dbpath /data/db --fork --logpath /dev/null
-´´´
+```
 
 As a side tip, if you need to stop the mogod service, run:
 
-´´´
+```
 $ mongo admin --eval 'db.shutdownServer()' > /dev/null
-´´´
+```
 
 And if you want ot verfiy it's running, type:
 
-´´´
+```
 $ ps -ef | grep mongo
-´´´
+```
 
 You should see **something** reminding this:
 
-´´´
+```
 0:21.77 mongod
-´´´
+```
 
 Now you can start the mongodb which is the actual database listening your connections. Type:
 
-´´´
+```
 $ mongo
-´´´
+```
 
 If you see a output that looks somewhat like this:
 
-´´´
+```
 MongoDB shell version: 2.4.4
 connecting to: test
 Server has startup warnings:
 Mon Oct  7 20:40:35.209 [initandlisten]
 Mon Oct  7 20:40:35.209 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
 >
-´´´
+```
 
 everything should be fine.
 
