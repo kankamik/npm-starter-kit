@@ -39,9 +39,10 @@
         "watch:js": "watch 'npm run compile:js && npm run jade' ./src/scripts/",
         "watch:css": "watch 'npm run compile:css && npm run jade' ./src/stylus/",
         "watch:html": "watch 'npm run jade' ./src/views/",
-        "start": "parallelshell 'npm run watch' 'npm run browser-sync'",
+        "init": "mkdir -p dist/stylesheets && npm run webpack && npm run stylus && npm run jade",
+        "start": "npm run init && parallelshell 'npm run watch' 'npm run browser-sync'",
         "server": "node ./bin/www",
-        "server:sync": "parallelshell 'node ./bin/www' 'npm run watch' 'npm run browser-sync:proxy'",
+        "server:sync": "npm run init && parallelshell 'node ./bin/www' 'npm run watch' 'npm run browser-sync:proxy'",
         "server:db:start": "mongod --dbpath /data/db --fork --logpath /dev/null",
         "server:db:stop": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
     },
